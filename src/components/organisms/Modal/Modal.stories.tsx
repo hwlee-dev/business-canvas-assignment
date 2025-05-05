@@ -1,9 +1,8 @@
+import Button from "@/components/atoms/Button";
+import Modal from "@/components/organisms/Modal/index";
 import type { Meta, StoryObj } from "@storybook/react";
-
-import Modal from "./index";
 import type { ModalProps } from "antd";
 import { useState } from "react";
-import Button from "@/components/atoms/Button";
 
 const meta = {
   title: "Components/Organisms/Modal",

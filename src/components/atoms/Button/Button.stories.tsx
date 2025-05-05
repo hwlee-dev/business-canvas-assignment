@@ -1,8 +1,7 @@
-import type { Meta, StoryObj } from "@storybook/react";
-
-import Button from "./index";
-import type { ButtonProps } from "antd";
+import Button from "@/components/atoms/Button/index";
 import { PlusOutlined } from "@ant-design/icons";
+import type { Meta, StoryObj } from "@storybook/react";
+import type { ButtonProps } from "antd";
 
 const meta = {
   title: "Components/Atoms/Button",
