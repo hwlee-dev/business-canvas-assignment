@@ -1,8 +1,8 @@
-import { Dropdown as AntDropdown } from "antd";
 import type {
   DropdownProps as AntDropdownProps,
   MenuProps as AntMenuProps,
 } from "antd";
+import { Dropdown as AntDropdown } from "antd";
 
 interface DropdownProps extends AntDropdownProps {
   items: AntMenuProps["items"];

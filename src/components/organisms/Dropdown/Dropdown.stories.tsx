@@ -1,8 +1,7 @@
-import type { Meta, StoryObj } from "@storybook/react";
-
-import Dropdown from "./index";
-import { MenuProps, ModalProps } from "antd";
 import Button from "@/components/atoms/Button";
+import Dropdown from "@/components/organisms/Dropdown/index";
+import type { Meta, StoryObj } from "@storybook/react";
+import { MenuProps, ModalProps } from "antd";
 
 const meta = {
   title: "Components/Organisms/Dropdown",
