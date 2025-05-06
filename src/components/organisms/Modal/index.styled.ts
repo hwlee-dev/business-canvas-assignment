@@ -1,7 +1,7 @@
-import { Modal as AntModal } from "antd";
+import { Modal } from "antd";
 import styled from "styled-components";
 
-export const StyledModal = styled(AntModal)`
+export const StyledModal = styled(Modal)`
   &&& {
     .ant-modal-content {
       padding: 0;
