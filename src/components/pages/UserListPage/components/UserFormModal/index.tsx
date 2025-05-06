@@ -1,7 +1,7 @@
 import Modal from "@/components/organisms/Modal";
 import { StyledFormWrapper } from "@/components/pages/UserListPage/components/UserFormModal/index.styled";
 import { USER_FORM_FIELDS } from "@/constants/user";
-import useUserPageHook from "@/hooks/useUserPageHook";
+import useUserPage from "@/hooks/useUserPage";
 import userStorage from "@/stores/user-storage";
 import { User } from "@/types/user";
 import { message as antMessage, Form } from "antd";
@@ -19,7 +19,7 @@ interface Props {
 const UserFormModal: React.FC<Props> = ({ open, user, onClose, onSubmit }) => {
   const [form] = Form.useForm();
   const { addUser, modifyUser } = userStorage();
-  const { getFormItems } = useUserPageHook();
+  const { getFormItems } = useUserPage();
 
   // 수정시 Form 초기값 설정
   useEffect(() => {
@@ -51,6 +51,7 @@ const UserFormModal: React.FC<Props> = ({ open, user, onClose, onSubmit }) => {
       addUser({
         ...values,
         id: uuidv4(),
+        agreement: !!values.agreement,
       });
       message = "회원을 추가하였습니다.";
     }
