@@ -4,8 +4,8 @@ const nextConfig: NextConfig = {
   /* config options here */
   transpilePackages: [
     "antd",
-    "rc-table",
     "@ant-design",
+    "rc-util",
     "@ant-design/v5-patch-for-react-19",
   ],
   compiler: {

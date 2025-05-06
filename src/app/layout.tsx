@@ -1,6 +1,7 @@
 import StyledComponentsRegistry from "@/lib/registry";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 import "@ant-design/v5-patch-for-react-19";
+import { ConfigProvider } from "antd";
 
 export default function RootLayout({
   children,
@@ -10,9 +11,11 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning>
       <body>
-        <StyledComponentsRegistry>
-          <AntdRegistry>{children}</AntdRegistry>
-        </StyledComponentsRegistry>
+        <ConfigProvider>
+          <StyledComponentsRegistry>
+            <AntdRegistry>{children}</AntdRegistry>
+          </StyledComponentsRegistry>
+        </ConfigProvider>
       </body>
     </html>
   );
