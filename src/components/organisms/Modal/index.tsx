@@ -30,7 +30,7 @@ const Modal = ({ children, title, closable = true, ...props }: ModalProps) => {
         )}
       </StyledTitle>
     );
-  }, [title, closable, props.closeIcon]);
+  }, [title, closable, props.closeIcon, props.onCancel]);
 
   return (
     <StyledModal closable={false} title={titleEl} {...props}>
